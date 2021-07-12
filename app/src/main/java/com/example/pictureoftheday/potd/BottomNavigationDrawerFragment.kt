@@ -1,10 +1,11 @@
-package com.example.pictureoftheday
+package com.example.pictureoftheday.potd
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import com.example.pictureoftheday.R
 import com.example.pictureoftheday.databinding.BottomNavigationLayoutBinding
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
