@@ -54,4 +54,7 @@
     <string name="tab_3">Tab 3</string>
     <string name="card">Card</string>
     <string name="change_theme">Change Theme</string>
+    <string name="earth">Earth</string>
+    <string name="mars">Mars</string>
+    <string name="weather">Weather</string>
 </resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/apiBottomEarth"
+        android:icon="@drawable/ic_earth"
+        android:title="@string/earth" />
+
+    <item
+        android:id="@+id/apiBottomMars"
+        android:icon="@drawable/ic_mars"
+        android:title="@string/mars" />
+
+    <item
+        android:id="@+id/apiBottomWeather"
+        android:icon="@drawable/ic_system"
+        android:title="@string/weather" />
+</menu>
