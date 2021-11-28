@@ -18,8 +18,8 @@
         <item name="colorOnSurface">@color/colorOnSurface</item>
         <item name="android:colorBackground">@color/background</item>
         <item name="colorOnBackground">@color/colorOnBackground</item>
-        <item name="fontFamily">@fonts/gantz</item>
-        <item name="android:fontFamily">@fonts/gantz</item>
+        <item name="fontFamily">@font/gantz</item>
+        <item name="android:fontFamily">@font/gantz</item>
         <item name="textAppearanceButton">@style/AppTextAppearance.Button</item>
         <item name="shapeAppearanceSmallComponent">@style/AppShapeAppearance.SmallComponent</item>
         <item name="shapeAppearanceMediumComponent">@style/AppShapeAppearance.MediumComponent</item>

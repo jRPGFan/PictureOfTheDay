@@ -2,15 +2,8 @@ package com.example.pictureoftheday.potd
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import android.graphics.Color
-import android.graphics.Typeface
 import android.net.Uri
 import android.os.Bundle
-import android.text.Spannable
-import android.text.SpannableString
-import android.text.style.ForegroundColorSpan
-import android.text.style.StrikethroughSpan
-import android.text.style.UnderlineSpan
 import android.transition.*
 import android.view.*
 import android.widget.ImageView
@@ -68,22 +61,6 @@ class PictureOfTheDayFragment : Fragment() {
         }
         setBottomSheetBehavior(binding.bottomSheet.bottomSheetContainer)
         setBottomAppBar(view)
-        activity?.let {
-            binding.chipToday.typeface =
-                Typeface.createFromAsset(it.assets, "fonts/DroidRobotRegular-DBWx.ttf")
-            val spannable = SpannableString(getString(R.string.day_before))
-            spannable.setSpan(
-                ForegroundColorSpan(Color.CYAN), 0, 3, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-            )
-            spannable.setSpan(
-                StrikethroughSpan(), 0, 3, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-            )
-            spannable.setSpan(
-                UnderlineSpan(), 4, spannable.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-            )
-            binding.chipDayBefore.text = spannable
-            binding.chipYesterday.typeface = Typeface.createFromAsset(it.assets, "fonts/gantz.ttf")
-        }
 
         binding.chipToday.setOnClickListener {
             viewModel.getData()
@@ -107,7 +84,7 @@ class PictureOfTheDayFragment : Fragment() {
                     .addTransition(ChangeBounds())
                     .addTransition(ChangeImageTransform())
             )
-            val parameters: ViewGroup.LayoutParams = binding.imageView.layoutParams
+            val parameters: ViewGroup.LayoutParams =  binding.imageView.layoutParams
             parameters.height =
                 if (isEnlarged) ViewGroup.LayoutParams.MATCH_PARENT else ViewGroup.LayoutParams.WRAP_CONTENT
             binding.imageView.layoutParams = parameters
@@ -168,9 +145,7 @@ class PictureOfTheDayFragment : Fragment() {
                         error(R.drawable.ic_load_error_vector)
                         placeholder(R.drawable.ic_no_photo_vector)
                     }
-                    serverResponseData.explanation?.let {
-                        binding.imageText.text = it
-                    }
+                    binding.imageText.text = serverResponseData.title
                 }
             }
 
