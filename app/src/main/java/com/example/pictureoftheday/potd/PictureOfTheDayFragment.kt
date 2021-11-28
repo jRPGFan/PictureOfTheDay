@@ -12,11 +12,10 @@ import androidx.lifecycle.ViewModelProviders
 import coil.load
 import com.example.pictureoftheday.MainActivity
 import com.example.pictureoftheday.R
-import com.example.pictureoftheday.ScrollingFragment
 import com.example.pictureoftheday.api.ApiActivity
 import com.example.pictureoftheday.api.ApiBottomNavigationActivity
 import com.example.pictureoftheday.settings.SettingsFragment
-import com.example.pictureoftheday.databinding.FragmentMainStartBinding
+import com.example.pictureoftheday.databinding.MainFragmentBinding
 import com.google.android.material.bottomappbar.BottomAppBar
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.snackbar.Snackbar
@@ -25,7 +24,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 class PictureOfTheDayFragment : Fragment() {
-    private var _binding: FragmentMainStartBinding? = null
+    private var _binding: MainFragmentBinding? = null
     private val binding get() = _binding!!
     private lateinit var bottomSheetBehavior: BottomSheetBehavior<ConstraintLayout>
     private val viewModel: PictureOfTheDayViewModel by lazy {
@@ -43,7 +42,7 @@ class PictureOfTheDayFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentMainStartBinding.inflate(inflater, container, false)
+        _binding = MainFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -104,10 +103,6 @@ class PictureOfTheDayFragment : Fragment() {
                     SettingsFragment()
                 )?.addToBackStack(null)?.commit()
             R.id.app_bar_api -> activity?.let { startActivity(Intent(it, ApiActivity::class.java)) }
-            R.id.scrollingFragment -> activity?.supportFragmentManager?.beginTransaction()?.replace(
-                R.id.container,
-                ScrollingFragment()
-            )?.addToBackStack(null)?.commit()
         }
         return super.onOptionsItemSelected(item)
     }

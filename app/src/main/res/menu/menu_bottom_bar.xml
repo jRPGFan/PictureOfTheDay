@@ -19,10 +19,4 @@
         android:title="@string/settings"
         app:showAsAction="ifRoom" />
 
-    <item
-        android:id="@+id/scrollingFragment"
-        android:icon="@drawable/ic_archive"
-        android:title="@string/scrolling_fragment"
-        app:showAsAction="ifRoom" />
-
 </menu>
