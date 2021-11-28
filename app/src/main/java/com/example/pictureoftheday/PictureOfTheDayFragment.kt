@@ -88,7 +88,7 @@ class PictureOfTheDayFragment : Fragment() {
             R.id.app_bar_settings ->
                 activity?.supportFragmentManager?.beginTransaction()?.replace(
                     R.id.container,
-                    SettingsFragment()
+                    ChipsFragment()
                 )?.addToBackStack(null)?.commit()
         }
         return super.onOptionsItemSelected(item)

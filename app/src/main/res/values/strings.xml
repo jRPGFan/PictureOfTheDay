@@ -38,20 +38,4 @@
     <string name="day_before">Day before</string>
     <string name="yesterday">Yesterday</string>
     <string name="today">Today</string>
-    <string name="choose_one">Choose one:</string>
-    <string name="raised_button">Raised Button</string>
-    <string name="unelevated_button">Unelevated Button</string>
-    <string name="outlined_button">Outlined Button</string>
-    <string name="text_button">Text Button</string>
-    <string name="checkbox">Checkbox</string>
-    <string name="radio_button">Radio Button</string>
-    <string name="switch_button_text">Switch</string>
-    <string name="filled_box_text_field_hint">Filled Box Text Field</string>
-    <string name="text_edit_text">Text</string>
-    <string name="outlined_box_text_field_hint">Outlined Box Text Field</string>
-    <string name="tab_1">Tab 1</string>
-    <string name="tab_2">Tab 2</string>
-    <string name="tab_3">Tab 3</string>
-    <string name="card">Card</string>
-    <string name="change_theme">Change Theme</string>
 </resources>
