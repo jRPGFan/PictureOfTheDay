@@ -1,4 +1,4 @@
-package com.example.pictureoftheday.potd
+package com.example.pictureoftheday
 
 import com.google.gson.annotations.SerializedName
 

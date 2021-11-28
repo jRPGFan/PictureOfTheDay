@@ -1,4 +1,4 @@
-package com.example.pictureoftheday.potd
+package com.example.pictureoftheday
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -10,11 +10,6 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import coil.load
-import com.example.pictureoftheday.MainActivity
-import com.example.pictureoftheday.R
-import com.example.pictureoftheday.api.ApiActivity
-import com.example.pictureoftheday.api.ApiBottomNavigationActivity
-import com.example.pictureoftheday.settings.SettingsFragment
 import com.example.pictureoftheday.databinding.MainFragmentBinding
 import com.google.android.material.bottomappbar.BottomAppBar
 import com.google.android.material.bottomsheet.BottomSheetBehavior
@@ -80,14 +75,7 @@ class PictureOfTheDayFragment : Fragment() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.app_bar_fav -> activity?.let {
-                startActivity(
-                    Intent(
-                        it,
-                        ApiBottomNavigationActivity::class.java
-                    )
-                )
-            }
+            R.id.app_bar_fav -> snackbar("Favourite")
             R.id.app_bar_search -> snackbar("Search")
             android.R.id.home -> {
                 activity?.let {
@@ -102,7 +90,6 @@ class PictureOfTheDayFragment : Fragment() {
                     R.id.container,
                     SettingsFragment()
                 )?.addToBackStack(null)?.commit()
-            R.id.app_bar_api -> activity?.let { startActivity(Intent(it, ApiActivity::class.java)) }
         }
         return super.onOptionsItemSelected(item)
     }

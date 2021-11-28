@@ -1,17 +1,16 @@
-package com.example.pictureoftheday.potd
+package com.example.pictureoftheday
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.pictureoftheday.BuildConfig
-import com.example.pictureoftheday.utilities.RetrofitImpl
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.util.*
 
 class PictureOfTheDayViewModel(
     private val liveDataForViewToObserve: MutableLiveData<PictureOfTheDayData> = MutableLiveData(),
-    private val retrofitImpl: RetrofitImpl = RetrofitImpl()
+    private val retrofitImpl: PODRetrofitImpl = PODRetrofitImpl()
 ) : ViewModel() {
     fun getData(): LiveData<PictureOfTheDayData> {
         sendServerRequest("")
@@ -85,4 +84,5 @@ class PictureOfTheDayViewModel(
             }
         }
     }
+
 }

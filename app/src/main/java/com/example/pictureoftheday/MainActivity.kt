@@ -4,7 +4,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.pictureoftheday.potd.PictureOfTheDayFragment
+import androidx.annotation.StyleRes
 
 const val sharedPreferencesFile = "PODsharedpreference"
 const val THEME_PREFERENCE = "themePref"

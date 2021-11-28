@@ -1,4 +1,4 @@
-package com.example.pictureoftheday.settings
+package com.example.pictureoftheday
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -8,9 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.example.pictureoftheday.R
-import com.example.pictureoftheday.THEME_PREFERENCE
-import com.example.pictureoftheday.sharedPreferencesFile
 import com.google.android.material.chip.Chip
 import kotlinx.android.synthetic.main.fragment_settings.*
 
@@ -67,8 +64,7 @@ class SettingsFragment : Fragment() {
         themeChanger.setOnClickListener {
             val editor: SharedPreferences.Editor = sharedPreferences.edit()
             if (sharedPreferences.getInt(
-                    THEME_PREFERENCE, R.style.Theme_PictureOfTheDay
-                ) == R.style.Theme_PictureOfTheDay
+                    THEME_PREFERENCE, R.style.Theme_PictureOfTheDay) == R.style.Theme_PictureOfTheDay
             )
                 editor.putInt(THEME_PREFERENCE, R.style.Default).apply()
             else

@@ -11,8 +11,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PictureOfTheDay">
-        <activity android:name=".api.ApiActivity"></activity>
-        <activity android:name=".api.ApiBottomNavigationActivity"></activity>
         <activity
             android:name=".MainActivity"
             android:configChanges="uiMode">
