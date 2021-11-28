@@ -148,11 +148,4 @@
     </string>
     <string name="scrolling_fragment">Scrolling Fragment</string>
     <string name="this_is_fine">this is fine</string>
-    <string name="animate">Animate</string>
-    <string name="transition_example">Transition example</string>
-    <string name="tap_here">Tap here</string>
-    <string name="path">Path</string>
-    <string name="shuffle">Shuffle!</string>
-    <string name="option_two">Option 2</string>
-    <string name="danielson_crater_description">Danielson Crater is an impact crater in the Oxia Palus quadrangle on Mars at 7.93° N and 7.11° W. and is 66.7 km in diameter, and is north of the Meridiani Planum, south of Arabia Terra and west of the planet\'s meridia. Its name was approved in 2009, and it was named after American engineer G. Edward Danielson.</string>
 </resources>
