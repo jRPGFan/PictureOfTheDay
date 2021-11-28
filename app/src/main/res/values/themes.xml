@@ -69,8 +69,4 @@
         <!-- Customize your theme here. -->
         <item name="fontFamily">sans-serif-light</item>
     </style>
-
-    <style name="Theme.PictureOfTheDay.Splash">
-        <item name="android:windowBackground">@drawable/splash_background_drawable</item>
-    </style>
 </resources>
