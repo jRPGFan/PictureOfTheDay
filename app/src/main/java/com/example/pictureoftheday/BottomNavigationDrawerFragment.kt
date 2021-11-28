@@ -1,15 +1,11 @@
-package com.example.pictureoftheday.potd
+package com.example.pictureoftheday
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.pictureoftheday.animations.AnimationSandboxActivity
-import com.example.pictureoftheday.R
-import com.example.pictureoftheday.animations.ConstraintSetAnimationActivity
+import android.widget.Toast
 import com.example.pictureoftheday.databinding.BottomNavigationLayoutBinding
-import com.example.pictureoftheday.recycler.RecyclerActivity
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 class BottomNavigationDrawerFragment : BottomSheetDialogFragment() {
@@ -31,17 +27,9 @@ class BottomNavigationDrawerFragment : BottomSheetDialogFragment() {
 
         binding.navigationView.setNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
-                R.id.navigation_one -> activity?.let {
-                    startActivity(Intent(it, AnimationSandboxActivity::class.java))
-                }
-                R.id.navigation_two -> activity?.let {
-                    startActivity(Intent(it, ConstraintSetAnimationActivity::class.java))
-                }
-                R.id.navigationThree -> activity?.let {
-                    startActivity(Intent(it, RecyclerActivity::class.java))
-                }
+                R.id.navigation_one -> Toast.makeText(context, "1", Toast.LENGTH_SHORT).show()
+                R.id.navigation_two -> Toast.makeText(context, "2", Toast.LENGTH_SHORT).show()
             }
-            dismiss()
             true
         }
     }

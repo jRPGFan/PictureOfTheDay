@@ -11,12 +11,4 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="color_gray">#66000000</color>
-    <color name="blue">#0039CB</color>
-    <color name="colorError">#F44336</color>
-    <color name="colorOnError">#FFFFFF</color>
-    <color name="colorSurface">#FFFFFF</color>
-    <color name="colorOnSurface">#212121</color>
-    <color name="background">#FAFAFA</color>
-    <color name="colorOnBackground">#212121</color>
-    <color name="colorAccent40Alfa">#662962FF</color>
 </resources>
