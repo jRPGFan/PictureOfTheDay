@@ -9,7 +9,6 @@ import com.example.pictureoftheday.animations.AnimationSandboxActivity
 import com.example.pictureoftheday.R
 import com.example.pictureoftheday.animations.ConstraintSetAnimationActivity
 import com.example.pictureoftheday.databinding.BottomNavigationLayoutBinding
-import com.example.pictureoftheday.recycler.RecyclerActivity
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 class BottomNavigationDrawerFragment : BottomSheetDialogFragment() {
@@ -37,11 +36,7 @@ class BottomNavigationDrawerFragment : BottomSheetDialogFragment() {
                 R.id.navigation_two -> activity?.let {
                     startActivity(Intent(it, ConstraintSetAnimationActivity::class.java))
                 }
-                R.id.navigationThree -> activity?.let {
-                    startActivity(Intent(it, RecyclerActivity::class.java))
-                }
             }
-            dismiss()
             true
         }
     }

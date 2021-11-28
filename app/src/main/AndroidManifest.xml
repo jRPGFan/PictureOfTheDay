@@ -15,7 +15,6 @@
         <activity android:name=".api.ApiBottomNavigationActivity"></activity>
         <activity android:name=".animations.AnimationSandboxActivity"></activity>
         <activity android:name=".animations.ConstraintSetAnimationActivity"></activity>
-        <activity android:name=".recycler.RecyclerActivity"></activity>
         <activity
             android:name=".MainActivity"
             android:configChanges="uiMode">

@@ -8,9 +8,5 @@
             android:id="@+id/navigation_two"
             android:icon="@drawable/ic_send"
             android:title="@string/to_screen_2" />
-        <item
-            android:id="@+id/navigationThree"
-            android:icon="@drawable/ic_wikipedia"
-            android:title="@string/to_screen_3" />
     </group>
 </menu>

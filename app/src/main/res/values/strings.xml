@@ -155,10 +155,4 @@
     <string name="shuffle">Shuffle!</string>
     <string name="option_two">Option 2</string>
     <string name="danielson_crater_description">Danielson Crater is an impact crater in the Oxia Palus quadrangle on Mars at 7.93° N and 7.11° W. and is 66.7 km in diameter, and is north of the Meridiani Planum, south of Arabia Terra and west of the planet\'s meridia. Its name was approved in 2009, and it was named after American engineer G. Edward Danielson.</string>
-    <string name="to_screen_3">To screen 3</string>
-    <string name="header">Header</string>
-    <string name="mars_description">
-        "Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, being larger than only Mercury."
-        "In English, Mars carries the name of the Roman god of war and is often referred to as the "Red Planet"."
-        "The latter refers to the effect of the iron oxide prevalent on Mars's surface, which gives it a reddish appearance distinctive among the astronomical bodies visible to the naked eye"</string>
 </resources>
