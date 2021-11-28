@@ -4,7 +4,9 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.transition.*
 import android.view.*
+import android.widget.ImageView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
@@ -20,11 +22,13 @@ import com.example.pictureoftheday.databinding.FragmentMainStartBinding
 import com.google.android.material.bottomappbar.BottomAppBar
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.snackbar.Snackbar
+import kotlinx.android.synthetic.main.activity_animation_enlarge.*
 import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.*
 
 class PictureOfTheDayFragment : Fragment() {
+    private var isEnlarged = false
     private var _binding: FragmentMainStartBinding? = null
     private val binding get() = _binding!!
     private lateinit var bottomSheetBehavior: BottomSheetBehavior<ConstraintLayout>
@@ -71,6 +75,21 @@ class PictureOfTheDayFragment : Fragment() {
         binding.chipDayBefore.setOnClickListener {
             viewModel.getData(getDate(-2))
                 .observe(viewLifecycleOwner, { renderData(it) })
+        }
+
+        binding.imageView.setOnClickListener {
+            isEnlarged = !isEnlarged
+            TransitionManager.beginDelayedTransition(
+                binding.main, TransitionSet()
+                    .addTransition(ChangeBounds())
+                    .addTransition(ChangeImageTransform())
+            )
+            val parameters: ViewGroup.LayoutParams =  binding.imageView.layoutParams
+            parameters.height =
+                if (isEnlarged) ViewGroup.LayoutParams.MATCH_PARENT else ViewGroup.LayoutParams.WRAP_CONTENT
+            binding.imageView.layoutParams = parameters
+            binding.imageView.scaleType =
+                if (isEnlarged) ImageView.ScaleType.CENTER_CROP else ImageView.ScaleType.FIT_CENTER
         }
     }
 
